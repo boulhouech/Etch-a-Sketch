@@ -28,13 +28,12 @@ button {
     margin: 5px;
     padding: 8px;
     text-align: center;
-    font-weight: 800;
-    border: solid 1px black;
-    border-radius: 8px;
+    
 }
 
 .footer {
     padding: 8px;
     margin: 8px;
 }
+
 

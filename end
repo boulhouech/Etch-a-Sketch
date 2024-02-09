@@ -1,0 +1,23 @@
+[33mcommit 800063c6720b76ac86da29138cd1a05e1e0bbc7b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: boulhouech <slim.boulahouech@gmail.com>
+Date:   Fri Feb 9 12:52:42 2024 +0100
+
+    finsihing selecting
+
+[33mcommit f41110daf87c1a4b1f1a03f8b45168a61b618dc2[m
+Author: boulhouech <slim.boulahouech@gmail.com>
+Date:   Fri Feb 9 12:49:44 2024 +0100
+
+    init javascript by selecting buttons with querySelectors
+
+[33mcommit 9516babe90b78022c0bd515677be081df1817509[m
+Author: boulhouech <slim.boulahouech@gmail.com>
+Date:   Fri Feb 9 12:40:01 2024 +0100
+
+    setting first ui and style it with css
+
+[33mcommit 07e0ee2d90f2a15c2ef601c7e76b1cde0f01b458[m
+Author: boulhouech <slim.boulahouech@gmail.com>
+Date:   Fri Feb 9 11:37:22 2024 +0100
+
+    first commit
