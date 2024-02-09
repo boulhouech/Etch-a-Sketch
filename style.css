@@ -17,6 +17,9 @@ h3 {
     padding: 5px;
     margin-top: 3px;
     margin-bottom: 12px;
+    color: blueviolet;
+    font-size: 30px;
+    font-style: italic;
 }
 
 button {
