@@ -5,10 +5,7 @@ const rgbColorButton = document.querySelector('#rgb');
 const resetButton = document.querySelector('#reset');
 
 function createGrid(rows, columns) {
-    rows = getDimension.value; 
-    columns = getDimension.value; 
-
-
+    
         // Clear the game board before creating a new grid
         gameBoard.innerHTML = '';
 
@@ -22,5 +19,10 @@ function createGrid(rows, columns) {
         }
     }
 
-    // Initial grid creation
-    createGrid(); 
+       // Initial grid creation
+        createGrid(16, 16); // Example default grid dimensions
+
+        getDimension.addEventListener('change', () => {
+            const dimensionValue = parseInt(getDimension.value);
+            createGrid(dimensionValue, dimensionValue);
+        });
