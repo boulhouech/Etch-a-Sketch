@@ -18,11 +18,16 @@ function createGrid(rows, columns) {
             gameBoard.appendChild(gridCreated); // Append the row to the game board
         }
     }
-
        // Initial grid creation
-        createGrid(16, 16); // Example default grid dimensions
+        createGrid(16, 16); //  default grid dimensions
 
-        getDimension.addEventListener('change', () => {
+        getDimension.addEventListener('change', function() {
             const dimensionValue = parseInt(getDimension.value);
-            createGrid(dimensionValue, dimensionValue);
+            if (dimensionValue > 100) {
+                window.prompt('Please enter a number less than or equal to 100.');
+                getDimension.value = ""; // Clear the input field
+                getDimension.setAttribute('max', '100'); // Set max attribute to 100
+            } else {
+                createGrid(dimensionValue, dimensionValue);
+            }
         });
