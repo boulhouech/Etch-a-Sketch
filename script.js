@@ -1,3 +1,4 @@
+// Selecting necessary elements from the DOM
 const getDimension = document.querySelector('input');
 const gameBoard = document.querySelector('.board');
 const blackColorButton = document.querySelector('#black');
@@ -18,10 +19,11 @@ function createGrid(rows, columns) {
             gameBoard.appendChild(gridCreated); // Append the row to the game board
         }
     }
-       // Initial grid creation
+       //  Initial setup: create a default 16x16 grid and set color to black
         createGrid(16, 16); //  default grid dimensions
-        changeColorToBlack();
+        changeColorToBlack(); // default color 
 
+        // Event listener for changes in the input field to adjust grid dimensions
         getDimension.addEventListener('change', function() {
             const dimensionValue = parseInt(getDimension.value);
             if (dimensionValue > 100) {
@@ -34,6 +36,8 @@ function createGrid(rows, columns) {
             }
         });
 
+
+        // Function to change the color of grid squares to black on mouseover
         function changeColorToBlack() {
             const gridSquares = document.querySelectorAll('.grid-square');
             gridSquares.forEach(square => {
@@ -43,6 +47,8 @@ function createGrid(rows, columns) {
             });
         }
 
+
+        // Function to generate a random RGB color
         function randomColor() {
             let randomRed = Math.floor(Math.random() * 256);
             let randomGreen = Math.floor(Math.random() * 256);
@@ -50,12 +56,9 @@ function createGrid(rows, columns) {
 
             let rgbColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue+ ")";
             return rgbColor;
-
         }
-            
-        
-            
 
+        // Function to change the color of grid squares to random RGB on mouseover
         function changeColortoRandom () {
             const gridSquares = document.querySelectorAll('.grid-square');
             gridSquares.forEach(square => {
@@ -64,13 +67,17 @@ function createGrid(rows, columns) {
                 })
             });
         }
-        
+
+        // Function to erase the grid by setting all square colors to white
         function eraseGrid () {
             const gridSquares = document.querySelectorAll('.grid-square');
             gridSquares.forEach(square => {
                 square.style.background = "white";
             });
         }
+
+
+        // Event listeners for buttons to change grid square colors and erase 
 
         blackColorButton.addEventListener('click', () => {
             changeColorToBlack();
@@ -83,7 +90,3 @@ function createGrid(rows, columns) {
         rgbColorButton.addEventListener('click', () => {
             changeColortoRandom();
         });
-
-        
-        
-
