@@ -20,14 +20,37 @@ function createGrid(rows, columns) {
     }
        // Initial grid creation
         createGrid(16, 16); //  default grid dimensions
+        changeColorToBlack();
 
         getDimension.addEventListener('change', function() {
             const dimensionValue = parseInt(getDimension.value);
             if (dimensionValue > 100) {
-                window.prompt('Please enter a number less than or equal to 100.');
+                alert('Please enter a number less than or equal to 100.');
                 getDimension.value = ""; // Clear the input field
                 getDimension.setAttribute('max', '100'); // Set max attribute to 100
             } else {
                 createGrid(dimensionValue, dimensionValue);
+                changeColorToBlack();
             }
         });
+
+        function changeColorToBlack() {
+            const gridSquares = document.querySelectorAll('.grid-square');
+            gridSquares.forEach(square => {
+                square.addEventListener('mouseover', () => {
+                    square.style.background = "black";
+                });
+            });
+        }
+        
+       
+
+        
+
+        blackColorButton.addEventListener('click', () => {
+            changeColorToBlack();
+        });
+
+        
+        
+
