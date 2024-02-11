@@ -45,10 +45,19 @@ function createGrid(rows, columns) {
         
        
 
-        
+        function eraseGrid () {
+            const gridSquares = document.querySelectorAll('.grid-square');
+            gridSquares.forEach(square => {
+                square.style.background = "white";
+            });
+        }
 
         blackColorButton.addEventListener('click', () => {
             changeColorToBlack();
+        });
+
+        resetButton.addEventListener('click', () => {
+            eraseGrid();
         });
 
         
