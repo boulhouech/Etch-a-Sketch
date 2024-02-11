@@ -54,13 +54,13 @@ button {
       width: 80%;
       height: 80%;
       margin: auto;
-      border: 2px solid black
+      border: 2px solid rgb(214, 85, 85)
     
 }
 
 .grid-square {
     box-sizing: border-box;
-      border: 1px solid black;
+      border: 1px solid rgb(149, 87, 87);
       background-color: white;
       
 }
