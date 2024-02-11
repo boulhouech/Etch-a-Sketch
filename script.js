@@ -42,9 +42,29 @@ function createGrid(rows, columns) {
                 });
             });
         }
-        
-       
 
+        function randomColor() {
+            let randomRed = Math.floor(Math.random() * 256);
+            let randomGreen = Math.floor(Math.random() * 256);
+            let randomBlue = Math.floor(Math.random() * 256);
+
+            let rgbColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue+ ")";
+            return rgbColor;
+
+        }
+            
+        
+            
+
+        function changeColortoRandom () {
+            const gridSquares = document.querySelectorAll('.grid-square');
+            gridSquares.forEach(square => {
+                square.addEventListener('mouseover', () => {
+                    square.style.background = randomColor();
+                })
+            });
+        }
+        
         function eraseGrid () {
             const gridSquares = document.querySelectorAll('.grid-square');
             gridSquares.forEach(square => {
@@ -58,6 +78,10 @@ function createGrid(rows, columns) {
 
         resetButton.addEventListener('click', () => {
             eraseGrid();
+        });
+
+        rgbColorButton.addEventListener('click', () => {
+            changeColortoRandom();
         });
 
         
